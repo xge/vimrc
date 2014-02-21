@@ -17,6 +17,9 @@ Bundle 'https://github.com/tomasr/molokai.git'
 " lean & mean status/tabline for vim that's light as air
 Bundle 'https://github.com/bling/vim-airline.git'
 
+" nerdtree - A tree explorer plugin for vim.
+Bundle 'https://github.com/scrooloose/nerdtree.git'
+
 filetype plugin indent on     " required
 "
 " Brief help
