@@ -22,8 +22,6 @@ Bundle 'https://github.com/scrooloose/nerdtree.git'
 
 call vundle#end()
 
-
-filetype plugin indent on     " required
 "
 " Brief help
 " :BundleList          - list configured bundles
