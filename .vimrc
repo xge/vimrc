@@ -2,10 +2,10 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/vimrc/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install bundles
-"let path = '~/some/path/here'
+let path = '~/vimrc/bundle'
 "call vundle#rc(path)
 
 " let Vundle manage Vundle, required
@@ -44,6 +44,13 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
+
+" No swap file
+set nobackup
+set noswapfile
+
+" Windows: fix clipboard
+source $VIMRUNTIME/mswin.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -108,6 +115,7 @@ let g:rehash256 = 1
 
 " Set extra options when running in GUI mode
 if has("gui_running")
+    set guifont=Consolas\ for\ Powerline\ FixedD:h9
     set guioptions-=T
     set guioptions+=e
     set t_Co=256
@@ -122,7 +130,17 @@ set ffs=unix,dos,mac
 
 " enable line numbers
 set number
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_branch_prefix = '⭠'
+let g:airline_readonly_symbol = '⭤'
+let g:airline_linecolumn_prefix = '⭡'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
